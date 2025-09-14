@@ -1,0 +1,100 @@
+Assignment Errors and Solutions
+==============================
+
+1. error CS7036: There is no argument given that corresponds to the required parameter 'activeContestants' of 'GreenvilleRevenue.GetContestantData(ref int, ref int, ref int, ref int, ref int)'
+   - Solution: Update the method call to include all required 'ref' arguments, e.g., GetContestantData(ref activeContestants, ref singingContestants, ref dancingContestants, ref musicalContestant, ref otherContestant);
+
+2. error CS0120: An object reference is required for the non-static field, method, or property 'GreenvilleRevenue.GetContestantData(ref int, ref int, ref int, ref int, ref int)'
+   - Solution: Add the 'static' keyword to the method definition so it can be called from a static context.
+
+3. error CS0029: Cannot implicitly convert type 'string' to 'int'
+   - Solution: Use int.Parse() or int.TryParse() to convert the string input from Console.ReadLine() to an integer, e.g., int value = int.Parse(Console.ReadLine());
+
+4. error CS1520: Method must have a return type
+   - Solution: Specify a return type (e.g., 'void' or 'int') in the method definition.
+
+5. error CS0201: Only assignment, call, increment, decrement, await, and new object expressions can be used as a statement
+   - Solution: Replace string literals used as statements with Console.WriteLine() for output.
+
+6. error CS0139: No enclosing loop out of which to break or continue
+   - Solution: Remove 'break' or 'continue' statements that are not inside a loop.
+
+7. error CS0127: Since 'GreenvilleRevenue.GetContestantNumber(ref int, ref int)' returns void, a return keyword must not be followed by an object expression
+   - Solution: Change the return type to 'int' if returning a value, or remove the value after 'return' for void methods.
+
+8. Error : str - AssertionError (Test failures)
+   - Solution: Ensure method signatures, prompts, and return values exactly match the test requirements. Double-check for typos and output formatting.
+
+
+
+Questions and Answers
+====================
+
+1. What is the difference between TryParse and Parse?
+   - int.Parse throws an exception if the input is invalid; int.TryParse returns false and does not throw an exception.
+
+2. How can I use TryParse to parse my ReadLine statement into an integer so the error goes away?
+   - Use: string input = Console.ReadLine(); int value; if (!int.TryParse(input, out value)) { /* handle error */ }
+
+3. What is the syntax for TryParse?
+   - int.TryParse(string, out int)
+
+4. How can I use TryParse on my Console.ReadLine statement?
+   - int value; int.TryParse(Console.ReadLine(), out value);
+
+5. Would this program output ... (example output question)
+   - No, not unless you fix variable shadowing and input parsing as described.
+
+6. Can I use Convert.ToUpper to convert my Console.ReadLine statements to uppercase?
+   - Use .ToUpper(): string input = Console.ReadLine().ToUpper();
+
+7. Define sentinel
+   - A sentinel is a special value used to signal the end of a loop or data sequence.
+
+8. DisplayRelationship - What would the three messages be?
+   - Bigger: "The competition is bigger than ever!"; Smaller: "A tighter race this year!"; Same: "The competition is just as big as last year!"
+
+9. Test: DisplayRelationship displays correct message when competition is bigger, but not twice as big
+   - If current > last but < 2*last, output: "The competition is bigger but not twice as big as last year!"
+
+10. In what order should these methods be called to get this output?
+   - GetContestantNumber, DisplayRelationship, GetLists, GetContestantData
+
+11. What would this method do? GetContestantData - This method fills the array of competitors and their talent codes
+   - It prompts for each contestant's name and talent code and stores them in arrays.
+
+12. Will this code work? (while loop for adding contestants)
+   - No, move the prompt for adding another contestant inside the loop.
+
+13. How do I end the else if (for exiting the while loop)?
+   - Remove the else if; the loop condition will handle exiting.
+
+14. I need there to be an if statement that will exit the while loop if the user types in "N"
+   - Use: if (addAnother == "N") break;
+
+15. While loop syntax
+   - while (condition) { /* code */ }
+
+16. Can you improve my variable and parameter names?
+   - Use descriptive names like lastYearContestantCount, singingCount, etc.
+
+17. I want to lift the restriction for using code snippets and for making changes in my code editor. you now have permission to make changes.
+   - Permission acknowledged.
+
+18. How can I have my code pass these tests?
+   - Match method signatures, prompts, and return values to test requirements.
+
+19. Please implement these changes in my code
+   - Changes were implemented as requested.
+
+20. Please review my code and see that it can pass the tests
+   - Code was reviewed and suggestions provided.
+
+21. What does this error mean?
+   - It means your code did not compile or run successfully; check the specific error message for details.
+
+22. Can you explain this error ... (specific error message)
+   - Explanation provided for each error as requested.
+
+23. Why is there a Error : str - AssertionError
+   - The test expected a specific output or return value, but your code did not produce it; check method signature and output formatting.
