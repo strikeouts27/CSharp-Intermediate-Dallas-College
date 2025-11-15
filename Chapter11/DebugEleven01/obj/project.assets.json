@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andrew\\Programming_projects\\DallasCollege\\CSharp\\CSharp-Intermediate-Dallas-College\\Chapter10\\JobDemo\\JobDemoApp.csproj",
-      "projectName": "JobDemoApp",
-      "projectPath": "C:\\Users\\Andrew\\Programming_projects\\DallasCollege\\CSharp\\CSharp-Intermediate-Dallas-College\\Chapter10\\JobDemo\\JobDemoApp.csproj",
+      "projectUniqueName": "C:\\Users\\Andrew\\Programming_projects\\DallasCollege\\CSharp\\CSharp-Intermediate-Dallas-College\\Chapter11\\DebugEleven01\\DebugEleven01.csproj",
+      "projectName": "DebugEleven01",
+      "projectPath": "C:\\Users\\Andrew\\Programming_projects\\DallasCollege\\CSharp\\CSharp-Intermediate-Dallas-College\\Chapter11\\DebugEleven01\\DebugEleven01.csproj",
       "packagesPath": "C:\\Users\\Andrew\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andrew\\Programming_projects\\DallasCollege\\CSharp\\CSharp-Intermediate-Dallas-College\\Chapter10\\JobDemo\\obj\\",
+      "outputPath": "C:\\Users\\Andrew\\Programming_projects\\DallasCollege\\CSharp\\CSharp-Intermediate-Dallas-College\\Chapter11\\DebugEleven01\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
