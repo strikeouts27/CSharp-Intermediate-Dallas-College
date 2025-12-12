@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SubscriptionExceptionTest.cs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbf4c16e742f3a363b7e4b5b71115b58ad431eff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cdf2598f91a4af1669fcb01119f85ee26c9e94b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SubscriptionExceptionTest.cs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SubscriptionExceptionTest.cs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

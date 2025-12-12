@@ -1,63 +1,41 @@
-﻿using System;
-using static System.Console;
-using System.Globalization;
-class FindSquareRoot
+﻿class SubscriptExceptionTest
 {
-	static void Main()
-	{
-		// Write your code here
+    static void Main()
+    {
+        double[] myArray = new double[10]{1,2,3,4,5,6,7,8,9,10};
+        ProcessArray(myArray);
+    }
 
-		// create a way for the user to make data entry 
-		while (true)
+    public static void ProcessArray(double[] myArray)
+    {
+        Console.WriteLine("Enter an array subscript (0-9) to view the value.");
+        Console.WriteLine("Enter 99 to quit.");
+
+        while (true)
         {
-			System.Console.WriteLine("Enter a number ");
-            string str = Console.ReadLine();
-			double value = -1; 
-
-
-			bool result = double.TryParse(str, out value); 
-			if (result == true)
+            string? input = Console.ReadLine();
+            if (input == "99")
             {
+                break;
+            }
 
-				double number = double.Parse(str); 
-				double sqNum = Math.Sqrt(number); 
-				if (number < 0)
+            try
+            {
+                if (!int.TryParse(input, out int index))
                 {
-					sqNum = 0; 
-                    try
-                    {
-                        throw new ApplicationException("Error: Number can't be negative."); 
-					}
-					catch(Exception e)
-                    {
-                       System.Console.WriteLine(e.Message); 
-                    }
+                    throw new FormatException();
                 }
-				System.Console.WriteLine($"Square root is {sqNum}");
-				
+
+                Console.WriteLine(myArray[index]);
             }
-			else if (result == false)
+            catch (IndexOutOfRangeException)
             {
-				double sqNum = 0; 
-				System.Console.WriteLine("value was not appropriate");
-				// every exception is a method that requires a parenthesis we have the option to pass in a message.
-                // throw new ApplicationException("Error: Number can't be negative."); 
+                Console.WriteLine("Index was outside the bounds of the array");
             }
-			
-
-			// 
+            catch (FormatException)
+            {
+                Console.WriteLine("Format Exception caught.");
+            }
         }
-		// I need to convert the users request to an int
-		 
-		
-
-		// display an appropriat emessage 
-		// set the square root value to 0. 
-
-		// else condition test the input numbers value for it to be negative. 
-		// if thats the case throw the new ApplicationException and message "Number cannot be negative." 
-		// again set the sqare root to 0. 
-
-		// if the input value is a double and not negative, pass it to the math.sqrt() method and display the returned value. 
-	}
+    }
 }
