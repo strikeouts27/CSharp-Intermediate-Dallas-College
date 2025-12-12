@@ -1,0 +1,12 @@
+1,Smith,3.4
+2,Doe,3.1
+3,Patel,2.7
+4,Johnson,2.5
+5,Williams,3.2
+6,Brown,3.6
+7,Jones,2.9
+8,Garcia,3.0
+9,Rodriguez,3.1
+10,Anderson,3.0
+11,Hernandez,3.5
+12,Moore,3.0
